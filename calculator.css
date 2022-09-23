@@ -66,4 +66,7 @@
 }
 .buttons__calc {
   background-color: #f5cb5c;
+}
+.buttons__item:hover {
+  color: #b8dbd9;
 }/*# sourceMappingURL=calculator.css.map */
