@@ -123,7 +123,7 @@ operators.forEach((operator) => {
 
 equal.addEventListener ("click", (event) => {
     if (!equalEntered && firstNumberEntered && secondNumberEntered) {
-        let equalValue = equal.innerHTML;
+        let equalValue = equal.value;
         displayInput.value = displayInput.value + " " + equalValue;
         result = calculate (Number(firstNumberValue), Number(secondNumberValue), globalOperatorValue );
         displayResult.value = result;
