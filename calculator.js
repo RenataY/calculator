@@ -51,6 +51,7 @@ const clickedNumber = document.querySelectorAll(".buttons__number");
 
 //get operators buttons 
 const operators = document.querySelectorAll(".buttons__operator");
+console.log (operators);
 
 //get = button 
 const equal = document.querySelector(".buttons__calc");
@@ -107,7 +108,9 @@ clickedNumber.forEach((number) => {
 // add operator to the input section of the calculator
 operators.forEach((operator) => {
     operator.addEventListener ("click", (event) => {
-        let operatorValue = operator.innerHTML;
+        // let operatorValue = operator.innerHTML;
+        console.log (operator.value);
+        let operatorValue = operator.value;
         displayInput.value = displayInput.value + " " + operatorValue;
         operatorEntered = true;
         firstNumberEntered = true;
@@ -119,7 +122,7 @@ operators.forEach((operator) => {
 // add " = " to the input section of the calculator
 
 equal.addEventListener ("click", (event) => {
-    if (!equalEntered) {
+    if (!equalEntered && firstNumberEntered && secondNumberEntered) {
         let equalValue = equal.innerHTML;
         displayInput.value = displayInput.value + " " + equalValue;
         result = calculate (Number(firstNumberValue), Number(secondNumberValue), globalOperatorValue );

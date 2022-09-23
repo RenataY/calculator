@@ -9,6 +9,11 @@
   padding: 30px;
   height: 20vh;
 }
+@media screen and (min-width: 800px) {
+  .result {
+    margin: 5vw 30vw 0;
+  }
+}
 .result__display {
   display: flex;
   flex-direction: column;
@@ -28,7 +33,7 @@
   padding: 10px;
   font-size: 18px;
   font-weight: bold;
-  color: #343a40;
+  color: #212529;
   background-color: #dee2e6;
 }
 .result__display__result {
@@ -39,7 +44,7 @@
   padding: 10px;
   font-size: 24px;
   font-weight: bold;
-  color: #343a40;
+  color: #212529;
   background-color: #dee2e6;
 }
 
@@ -51,6 +56,11 @@
   grid-template-columns: 1fr 1fr 1fr 1fr;
   justify-content: space-evenly;
   grid-gap: 10px;
+}
+@media screen and (min-width: 800px) {
+  .buttons {
+    margin: 0 30vw;
+  }
 }
 .buttons__item {
   background-color: #212529;
